@@ -90,10 +90,6 @@ animation: scan 7.5s linear 0s infinite;
 4. **Scanning Animation**: Line moving vertically
 5. **Gradients**: Background with visual depth
 
-## 📝 License
-
-This project is open source and can be freely used for personal and commercial projects.
-
 ---
 
 **Enjoy your retro 404 page!** 🎮✨

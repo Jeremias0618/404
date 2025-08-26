@@ -12,14 +12,23 @@ A 404 error page with a retro design inspired by old computer terminals, featuri
   - Text glow effects
 - **Responsive**: Adapts to different screen sizes
 - **No Scrollbars**: Optimized design to avoid scrollbars
+- **100% Offline**: All resources are included locally
+- **Professional Structure**: Well-organized project folders
 
 ## 📁 Project Structure
 
 ```
 404/
 ├── index.html          # Main HTML file
-├── style.css           # CSS styles with visual effects
-└── README.md           # This documentation file
+├── css/
+│   └── style.css      # CSS styles with visual effects
+├── fonts/
+│   ├── fonts.css      # Local font definitions
+│   └── Inconsolata-Regular.ttf  # Inconsolata font (local)
+├── img/
+│   ├── background.gif # Background Matrix GIF
+│   └── security.ico   # Security icon
+└── README.md          # This documentation file
 ```
 
 ## 🔧 How It Works
@@ -29,20 +38,31 @@ A 404 error page with a retro design inspired by old computer terminals, featuri
 - Main `.terminal` container with error message
 - `.noise` and `.overlay` elements for visual effects
 
-### CSS (`style.css`)
-- **Font**: Imports Inconsolata from Google Fonts for terminal look
-- **Background**: Radial green gradient with background GIF image
+### CSS (`css/style.css`)
+- **Font**: Uses local Inconsolata font for terminal look
+- **Background**: Radial green gradient with local background GIF image
 - **Scanning Effects**: 
   - Horizontal lines with `repeating-linear-gradient`
   - Vertical scanning animation with `@keyframes scan`
 - **Centering**: Content is perfectly centered on screen
 - **Responsive**: Media queries for mobile devices
 
+### Fonts (`fonts/fonts.css`)
+- Local font definitions using `@font-face`
+- Inconsolata font downloaded and stored locally
+- No external dependencies on Google Fonts
+
+### Images (`img/`)
+- All images and icons stored locally
+- Background GIF for Matrix-style effect
+- Security icon for the page favicon
+
 ## 🚀 How to Use
 
 1. **Open file**: Simply open `index.html` in your browser
-2. **Customize**: Modify text in `index.html` or colors in `style.css`
-3. **Implement**: Copy these files to your web server for custom 404 pages
+2. **Offline use**: Works completely without internet connection
+3. **Customize**: Modify text in `index.html` or colors in `css/style.css`
+4. **Implement**: Copy these files to your web server for custom 404 pages
 
 ## 🎨 Customization
 
@@ -63,8 +83,11 @@ animation: scan 7.5s linear 0s infinite;
 
 ### Change Font
 ```css
-/* Import new font from Google Fonts */
-@import 'https://fonts.googleapis.com/css?family=YOUR_FONT';
+/* Modify fonts/fonts.css to use different local fonts */
+@font-face {
+  font-family: 'YourFont';
+  src: url('./YourFont.ttf') format('truetype');
+}
 ```
 
 ## 📱 Compatibility
@@ -81,6 +104,8 @@ animation: scan 7.5s linear 0s infinite;
 - **HTML Structure**: Corrected to follow HTML5 standards
 - **Responsiveness**: Improved for mobile devices
 - **Centering**: Content now centers perfectly on any screen
+- **Offline Dependencies**: All external resources downloaded locally
+- **Project Structure**: Organized into professional folder structure
 
 ## 🌟 Visual Effects Included
 
@@ -89,6 +114,18 @@ animation: scan 7.5s linear 0s infinite;
 3. **Text Glow**: Phosphorescent green terminal effect
 4. **Scanning Animation**: Line moving vertically
 5. **Gradients**: Background with visual depth
+6. **Matrix Style**: Retro terminal aesthetic
+
+## 🔒 Offline Features
+
+- **Local Fonts**: Inconsolata font stored locally
+- **Local Images**: All graphics and icons included
+- **No External Calls**: Works completely offline
+- **Portable**: Can be moved to any location without breaking
+
+## 📝 License
+
+This project is open source and can be freely used for personal and commercial projects.
 
 ---
 
